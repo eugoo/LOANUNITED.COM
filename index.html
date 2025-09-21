@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoanUnited - Your Trusted Loan Partner</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <i class="fas fa-hand-holding-usd"></i>
+            LoanUnited
+          </div>
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Loan Options</a></li>
+              <li><a href="#calculator">Calculator</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#apply" class="btn">Apply Now</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Find the Perfect Loan for Your Needs</h1>
+          <p>
+            With competitive rates and flexible terms, we make borrowing simple
+            and affordable
+          </p>
+          <div>
+            <a href="#apply" class="btn">Apply Now</a>
+            <a href="#services" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Loan Options</h2>
+          <p>
+            We offer a variety of loan products to meet your financial needs
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-home"></i>
+            <h3>Mortgage Loans</h3>
+            <p>
+              Buy your dream home with our competitive mortgage rates and
+              flexible payment options.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-car"></i>
+            <h3>Auto Loans</h3>
+            <p>
+              Drive away in the car you've always wanted with our low-interest
+              auto loans.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Student Loans</h3>
+            <p>
+              Invest in your future with education financing options tailored to
+              your needs.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-credit-card"></i>
+            <h3>Personal Loans</h3>
+            <p>
+              Get the funds you need for life's unexpected expenses or special
+              occasions.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-building"></i>
+            <h3>Business Loans</h3>
+            <p>
+              Grow your business with our flexible financing solutions for
+              entrepreneurs.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Debt Consolidation</h3>
+            <p>
+              Simplify your finances by combining multiple debts into one
+              manageable loan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loan Calculator -->
+    <section class="calculator" id="calculator">
+      <div class="container">
+        <div class="section-title">
+          <h2>Loan Calculator</h2>
+          <p>
+            Estimate your monthly payments and find the right loan for your
+            budget
+          </p>
+        </div>
+        <div class="calc-container">
+          <form class="calc-form">
+            <div class="form-group">
+              <label for="loan-amount">Loan Amount ($)</label>
+              <input
+                type="number"
+                id="loan-amount"
+                placeholder="Enter loan amount"
+                value="25000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="interest-rate">Interest Rate (%)</label>
+              <input
+                type="number"
+                id="interest-rate"
+                placeholder="Enter interest rate"
+                value="5.5"
+                step="0.1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="loan-term">Loan Term (years)</label>
+              <select id="loan-term">
+                <option value="1">1 Year</option>
+                <option value="2">2 Years</option>
+                <option value="3">3 Years</option>
+                <option value="5" selected>5 Years</option>
+                <option value="7">7 Years</option>
+                <option value="10">10 Years</option>
+                <option value="15">15 Years</option>
+                <option value="20">20 Years</option>
+                <option value="30">30 Years</option>
+              </select>
+            </div>
+            <button type="button" class="btn" onclick="calculateLoan()">
+              Calculate Payment
+            </button>
+          </form>
+          <div class="calc-result">
+            <h3>Estimated Monthly Payment</h3>
+            <div class="amount" id="monthly-payment">$478.88</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-title">
+          <h2>Simple Application Process</h2>
+          <p>
+            Getting a loan has never been easier with our streamlined process
+          </p>
+        </div>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Apply Online</h3>
+            <p>Fill out our simple application form in minutes</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Get Approved</h3>
+            <p>Receive a decision quickly, often within hours</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Receive Funds</h3>
+            <p>Get your money deposited directly into your account</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Customer Testimonials</h2>
+          <p>
+            Hear what our customers have to say about their experience with
+            LoanUnited
+          </p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "LoanUnited made the mortgage process so simple. I got a great
+              rate and was able to close on my new home faster than I expected."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Eugene Ome"
+              />
+              <div class="author-details">
+                <h4>Eugene Ome</h4>
+                <p>Homeowner</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "I was struggling with high-interest credit card debt. LoanUnited
+              helped me consolidate everything into one manageable payment with
+              a much lower rate."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Michael Chen"
+              />
+              <div class="author-details">
+                <h4>Michael Emeka</h4>
+                <p>Debt Consolidation Customer</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The online application was so easy to complete, and I was
+              approved for my auto loan within hours. Highly recommend
+              LoanUnited!"
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Emily Rodriguez"
+              />
+              <div class="author-details">
+                <h4>Emily Rodriguez</h4>
+                <p>Auto Loan Customer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Have questions? Our loan specialists are here to help</p>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="loan-type">Loan Type</label>
+              <select id="loan-type">
+                <option value="">Select a loan type</option>
+                <option value="mortgage">Mortgage Loan</option>
+                <option value="auto">Auto Loan</option>
+                <option value="personal">Personal Loan</option>
+                <option value="student">Student Loan</option>
+                <option value="business">Business Loan</option>
+                <option value="debt">Debt Consolidation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                placeholder="How can we help you?"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>LoanUnited</h3>
+            <p>
+              Your trusted partner for all your lending needs. We're committed
+              to helping you find the right financial solution.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Loan Options</a></li>
+              <li><a href="#calculator">Calculator</a></li>
+              <li><a href="#process">Application Process</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Financial Street,
+                Suite 456
+              </li>
+              <li><i class="fas fa-phone"></i> (555) 123-LOAN</li>
+              <li><i class="fas fa-envelope"></i> info@loanunited.com</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2023 LoanUnited. All rights reserved. | NMLS #123456 |
+            <a href="#" style="color: #ccc">Privacy Policy</a> |
+            <a href="#" style="color: #ccc">Terms of Use</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.querySelector(".mobile-menu-btn");
+      const nav = document.querySelector("nav");
+
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            nav.classList.remove("active");
+          }
+        });
+      });
+
+      // Loan calculator function
+      function calculateLoan() {
+        const loanAmount = parseFloat(
+          document.getElementById("loan-amount").value
+        );
+        const interestRate = parseFloat(
+          document.getElementById("interest-rate").value
+        );
+        const loanTerm = parseInt(document.getElementById("loan-term").value);
+
+        // Monthly interest rate
+        const monthlyRate = interestRate / 100 / 12;
+
+        // Number of payments
+        const numberOfPayments = loanTerm * 12;
+
+        // Calculate monthly payment
+        const monthlyPayment =
+          (loanAmount *
+            monthlyRate *
+            Math.pow(1 + monthlyRate, numberOfPayments)) /
+          (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+
+        // Display result
+        document.getElementById("monthly-payment").textContent =
+          "$" + monthlyPayment.toFixed(2);
+      }
+
+      // Initialize calculator on page load
+      window.onload = function () {
+        calculateLoan();
+      };
+    </script>
+  </body>
+</html>
